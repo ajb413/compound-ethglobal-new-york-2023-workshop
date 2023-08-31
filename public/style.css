@@ -205,3 +205,9 @@ select {
 .liquidatable {
   background-color: #990000;
 }
+
+.last-update {
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
