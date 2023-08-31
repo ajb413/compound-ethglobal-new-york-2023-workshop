@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Compound Account Health Dashboard</title>
+</head>
+<body>
+
+  <h1>Compound Account Health Dashboard</h1>
+
+  <select class="" name="instance" id="instance-select">
+    <option value="cUSDCv3_ETH">cUSDCv3 Mainnet Ethereum</option>
+    <option value="cWETHv3_ETH">cWETHv3 Mainnet Ethereum</option>
+    <option value="cUSDCv3_POL">cUSDCv3 Polygon</option>
+    <option value="cUSDCv3_e_ARB">cUSDCv3 Arbitrum (Bridged)</option>
+    <option value="cUSDCv3_ARB">cUSDCv3 Arbitrum (Native)</option>
+    <option value="cUSDbCv3_BASE">cUSDbCv3 Base</option>
+    <option value="cWETHv3_BASE">cWETHv3 Base</option>
+  </select>
+
+  <div class="last-update" id="last-update">Data as of...</div>
+
+  <div class="account-table-container" id="table-container">
+    <div class="table loading" id="table-content"></div>
+  </div>
+
+</body>
+
+<script type="text/javascript" src="./app.js"></script>
+
+</html>

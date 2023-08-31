@@ -1,0 +1,20 @@
+{
+  "name": "compound-3-account-health-dashbooard",
+  "version": "1.0.0",
+  "description": "Compound III account health dashboard.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx hardhat compile && node index.js"
+  },
+  "keywords": [],
+  "author": "ajb413",
+  "license": "MIT",
+  "dependencies": {
+    "@compound-finance/sleuth": "^1.0.1-alpha8",
+    "ethers": "^5.7.0",
+    "express": "^4.18.2",
+    "hardhat": "^2.17.2",
+    "helmet": "^7.0.0"
+  }
+}
