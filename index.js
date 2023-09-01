@@ -108,19 +108,6 @@ function updateConsoleLogLine() {
   process.stdout.write(strings.join(', '));
 }
 
-function decodeAssetsIn(assetsIn, assets) {
-  const userCollaterals = [];
-  const collaterals = Object.keys(assets);
-  collaterals.shift();
-  collaterals.forEach((asset, i) => {
-    if (((assetsIn & (1 << i)) != 0)) {
-      userCollaterals.push(asset);
-    }
-  });
-
-  return userCollaterals;
-}
-
 async function syncInstance(instance) {
   if (!db[instance]) {
     db[instance] = {
@@ -243,13 +230,13 @@ async function getDataForAllAccounts(provider, uniqueAddresses, cometAddress) {
     ...accountDataQuerySol,
     evm: { bytecode: { object: accountDataQuerySol.bytecode } }
   };
-  let userBasicQuery = await Sleuth.querySol(accountDataQuerySolFixed);
+  let accountDataQuery = await Sleuth.querySol(accountDataQuerySolFixed);
 
   let accountDataArray = [];
 
   const addressChunkSize = 1000;
   for (let chunk of chunkBy([...uniqueAddresses], addressChunkSize)) {
-    let [chunkBlockNumber, _accountDataArray] = await sleuth.fetch(userBasicQuery, [cometAddress, chunk]);
+    let [chunkBlockNumber, _accountDataArray] = await sleuth.fetch(accountDataQuery, [cometAddress, chunk]);
     accountDataArray = accountDataArray.concat(_accountDataArray);
   }
 
