@@ -21,6 +21,10 @@ npm install
 
 ## Run
 
+To run the project, first get JSON RPC provider URLs (for free) at alchemy.com.
+
+Run the command below with your supplanted JSON RPC URLs.
+
 After running the server (index.js), navigate to http://localhost:3000/ in a web browser. The front-end web files shown are in the `public/` folder.
 
 ```bash
