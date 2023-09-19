@@ -7,7 +7,7 @@ Example app that shows current account health for every account borrowing from C
 Install Node.js at https://nodejs.org/
 
 ```
-git clone [git@github.com:ajb413/compound-ethglobal-new-york-2023-workshop.git](https://github.com/ajb413/compound-ethglobal-new-york-2023-workshop.git)
+git clone https://github.com/ajb413/compound-ethglobal-new-york-2023-workshop.git
 cd compound-ethglobal-new-york-2023-workshop/
 npm install
 ```
